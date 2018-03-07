@@ -14,9 +14,9 @@
 <!-- User logged in -->
 <ng-template #authenticated>
   <div *ngIf="auth.user | async as user">
-    <h3>Howdy, {{ user.displayName }}</h3>
     <div>
     <img class="card-img-top" [src]="user.photoURL || 'https://api.adorable.io/avatars/109/fire.png'" width=50px>
+    <h3>{{ user.displayName }}</h3>
   </div>
   <br>
     <button type ="button" class="btn btn-primary" (click)="logout()">Logout</button>

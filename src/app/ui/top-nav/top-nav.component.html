@@ -1,7 +1,7 @@
-<nav class="nav">
+<nav class="nav" style="background-color:darkseagreen">
   <div class="nav-left">
     <a class="nav-item logo" routerLink="/">
-      <img src="assets/images/angularfirebase.png" width="30px" alt="Firestarter Angular4 Demo App"/>DexBook
+      <img src="assets/images/d.png" width="30px" alt="Firestarter Angular4 Demo App"/>DexBook
     </a>
   </div>
 
@@ -15,12 +15,12 @@
 
   <!-- This "nav-menu" is hidden on mobile -->
   <!-- Add the modifier "is-active" to display it on mobile -->
-  <div class="nav-right nav-menu" [ngClass]="{'is-active': show}">
+  <div class="nav-right nav-menu" [ngClass]="{'is-active': show}" style="color:darkblue">
     <a class="nav-item" routerLink="/login">
       Login
     </a>
     <a class="nav-item" routerLink="/notes">
-      Firestore
+      Home
     </a>
     <a class="nav-item" routerLink="/items">
       Realtime DB

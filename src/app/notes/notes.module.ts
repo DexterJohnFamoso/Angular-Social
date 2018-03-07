@@ -11,6 +11,7 @@ import { NoteDetailComponent } from './note-detail/note-detail.component';
 
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
+import { ImageUploadModule } from "angular2-image-upload";
 
 var firebaseConfig = {
   apiKey: "AIzaSyBk0ZtPBFBNwaeK3L8KX2T3zAPP1TmGb04",
@@ -27,6 +28,7 @@ var firebaseConfig = {
     FormsModule,
     SharedModule,
     AngularFirestoreModule.enablePersistence(),
+    ImageUploadModule.forRoot(),
   ],
   declarations: [
     NotesListComponent,

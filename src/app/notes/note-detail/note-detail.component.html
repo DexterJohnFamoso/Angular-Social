@@ -1,6 +1,8 @@
-<div>
+
+
+<div class="box" style="background-color:darkseagreen">
   <h3>{{ note.content }}</h3>
-  <p>Date = {{ today | date }}</p>
+  <p>{{ date_expression | date : format : timezone}}</p>
   <script>
     var app = angular.module('myApp', []);
     app.controller('datCtrl', function($scope) {
@@ -8,7 +10,10 @@
     });
     </script>
   <span class="button is-small is-info" (click)='addHeartToNote(note.hearts)'>
-    Heart <i class="fa fa-heart"></i>
+    Like <i class="fa fa-thumbs-o-up"></i>
+  </span>
+  <span class="button is-small is-info" (click)='lessHeartToNote(note.hearts)'>
+    Dislike <i class="fa fa-thumbs-down"></i>
   </span>
   <span class="button is-small is-danger" (click)='deleteNote(note?.id)'>Delete</span>
   <p>This note has been hearted {{ note.hearts || 0 }} times.</p>

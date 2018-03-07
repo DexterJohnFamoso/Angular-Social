@@ -1,18 +1,9 @@
 
 
 <input [(ngModel)]="content" placeholder="What's your feeling today?.." class="input">
-<div>
   <div class="box">
     <h3>Add image</h3>
-  
-    <label>
-      <input type="file" class="button" (change)="detectFiles($event)">
-    </label>
-    <button class="button is-primary"
-      [disabled]="!selectedFiles"
-      (click)="uploadSingle()">
-      Upload
-    </button>
+    <image-upload></image-upload>
 </div>
 
 <button class="button is-success" (click)="createNote()" [disabled]="content?.length < 2 || content?.length > 200">
