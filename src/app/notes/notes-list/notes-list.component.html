@@ -1,11 +1,22 @@
-<h1>Firestore Notes</h1>
-<p>This is a very basic demo of the Firestore database.</p>
 
-<input [(ngModel)]="content" placeholder="Add your own note" class="input">
 
+<input [(ngModel)]="content" placeholder="What's your feeling today?.." class="input">
+<div>
+  <div class="box">
+    <h3>Add image</h3>
+  
+    <label>
+      <input type="file" class="button" (change)="detectFiles($event)">
+    </label>
+    <button class="button is-primary"
+      [disabled]="!selectedFiles"
+      (click)="uploadSingle()">
+      Upload
+    </button>
+</div>
 
 <button class="button is-success" (click)="createNote()" [disabled]="content?.length < 2 || content?.length > 200">
-  Add Note
+  Add Status
 </button>
 <hr>
 <div *ngFor="let note of notes | async">

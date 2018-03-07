@@ -1,5 +1,12 @@
 <div>
   <h3>{{ note.content }}</h3>
+  <p>Date = {{ today | date }}</p>
+  <script>
+    var app = angular.module('myApp', []);
+    app.controller('datCtrl', function($scope) {
+        $scope.today = new Date();
+    });
+    </script>
   <span class="button is-small is-info" (click)='addHeartToNote(note.hearts)'>
     Heart <i class="fa fa-heart"></i>
   </span>
